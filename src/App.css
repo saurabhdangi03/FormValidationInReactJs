@@ -1,0 +1,141 @@
+/* Basic styles for the form */
+/* Apply background color to the entire screen */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2a84de; /* Change this color to whatever you like */
+}
+
+/* Alternatively, you can target the root div */
+#root {
+  min-height: 100vh;
+  background-color: #2a84de; /* Change this color to whatever you like */
+  margin-top: 100px;
+}
+
+/* Additional styles for form container */
+.App {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensures the content is centered vertically */
+  background-color: inherit; /* Use the background color from the body */
+}
+
+
+
+h2 {
+  color: #0056b3;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 60px;
+  background-color:whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid orangered;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Border animation on focus */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  position: relative;
+  background-color: transparent;
+}
+
+input[type="text"]:before,
+input[type="email"]:before,
+input[type="password"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  z-index: -1;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus:before,
+input[type="email"]:focus:before,
+input[type="password"]:focus:before {
+  border-color: #007bff;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  padding: 10px 15px;
+  margin-left: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Error message styles */
+h3{
+  text-align: center;
+  color: whitesmoke;
+}
+p strong{
+  
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 14px;
+  margin: 5px 0 0 0;
+}
